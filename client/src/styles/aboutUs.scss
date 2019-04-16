@@ -1,0 +1,23 @@
+.aboutUs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 20px;
+  align-items: center;
+  text-align: center;
+  height: 40vh;
+  padding: 2% 20px;
+  background-color: rgba(245, 245, 245, 0.70);
+}
+
+.aboutUs h3 {
+  color: #e7a61a;
+  padding-bottom: 20px;
+}
+
+.aboutUs p {
+  color: #000000;
+}
+
+.aboutUs i:first-letter {
+  padding-right: 10px;
+}

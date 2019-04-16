@@ -1,0 +1,31 @@
+@import 'constants';
+
+$backgroundImage: url('images/book-club.png');
+
+.preview {
+  background-image: $backgroundImage;
+  height: calc(100vh - #{$headerSize});
+}
+
+.divPreview {
+  width: 60%;
+  padding-left: 5%;
+}
+
+.textPreview:first-child {
+  padding-top: 20%;
+}
+
+.textPreview {
+  font-size: 35px;
+  color: #ffffff;
+  padding-top: 2%;
+}
+
+.preview .btn-secondary {
+  background-color: $activeColor;
+  color: #000000;
+  font-size: 25px;
+  width: 25%;
+  border-radius: 50px;
+}

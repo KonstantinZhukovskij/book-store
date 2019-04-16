@@ -1,0 +1,31 @@
+@import 'constants';
+
+.bookCard {
+  text-align: center;
+  padding: 50px;
+  background-color: #ffffff;
+  border: 1px solid #F5F5F5;
+}
+
+.bookCard:hover {
+  transition-duration: 0.3s;
+  box-shadow: $boxShadow
+}
+
+.bookCard img {
+  width: 60%;
+}
+
+.bookCard .btn-group {
+  width: 50%;
+}
+
+.bookCard .btn-secondary {
+  color: #000000;
+  background-color: $activeColor;
+}
+
+.countInput {
+  width: 50%;
+  text-align: center;
+}

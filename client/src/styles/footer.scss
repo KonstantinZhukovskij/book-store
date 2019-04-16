@@ -1,0 +1,26 @@
+@import 'constants';
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+  height: 25vh;
+  background-color: $backgroundColor;
+  color: #ffffff;
+}
+
+.newsLetter {
+  justify-self: center;
+  align-self: center;
+  width: 50%;
+}
+
+.companyInfo {
+  justify-self: center;
+  align-self: center;
+}
+
+.newsLetter .btn-outline-secondary {
+  background-color: $activeColor;
+  color: #000000;
+}

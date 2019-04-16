@@ -20,7 +20,8 @@ module.exports = {
             { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
             { test: /\.jsx$/, exclude: /node_modules/, loader: 'babel-loader' },
             { test: /\.css$/, use: [MiniCssExtractPlugin.loader, 'css-loader'] },
-            { test: /\.scss$/, use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'] }
+            { test: /\.scss$/, use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'] },
+            { test: /\.(png|svg|jpg|gif)$/, use: ['file-loader'] }
         ]
     },
     optimization: {

@@ -1,0 +1,29 @@
+@import 'constants';
+
+.header {
+  height: $headerSize;
+  background-color: $backgroundColor;
+}
+
+.headerButtons {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.headerButtons button:first-child {
+  grid-column-start: 2;
+}
+
+.header .btn-dark {
+  height: $headerSize;
+  background-color: $backgroundColor;
+  border-radius: 0 !important;
+  font-size: 20px;
+}
+
+.header .btn-dark:hover {
+  background-color: $backgroundColorHover;
+  text-decoration: underline;
+  text-decoration-color: $activeColor;
+}
+
