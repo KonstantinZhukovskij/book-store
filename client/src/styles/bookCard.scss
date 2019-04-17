@@ -2,9 +2,12 @@
 
 .bookCard {
   text-align: center;
-  padding: 50px;
   background-color: #ffffff;
   border: 1px solid #F5F5F5;
+}
+
+.bookCardContent {
+  margin-top: 25px;
 }
 
 .bookCard:hover {
@@ -13,7 +16,8 @@
 }
 
 .bookCard img {
-  width: 60%;
+  width: 50%;
+  padding-bottom: 5%;
 }
 
 .bookCard .btn-group {
@@ -26,6 +30,7 @@
 }
 
 .countInput {
+  min-width: 40px;
   width: 50%;
   text-align: center;
 }
