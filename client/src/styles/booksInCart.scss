@@ -1,0 +1,23 @@
+@import 'constants';
+
+.booksInCart {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.booksInCart p {
+  font-size: 17px;
+  padding-top: 5%;
+  padding-left: 5%;
+}
+
+.booksInCart button {
+  width: 40%;
+  justify-self: end;
+  background: transparent !important;
+  border: none !important;
+}
+
+.booksInCart button:hover i {
+  background-color: $activeColor;
+}

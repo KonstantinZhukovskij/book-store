@@ -1,13 +1,15 @@
+import Popup from 'components/Popup';
 import React from 'react';
 
 const Header = () => {
     return (
         <div className='header'>
             <div className='headerButtons'>
-                <button className='btn btn-dark'>HOME</button>
-                <button className='btn btn-dark'>CATALOG</button>
-                <button className='btn btn-dark'>OUR COMPANY</button>
-                <button className='btn btn-dark'>ABOUT US</button>
+                <button className='btn btn-dark'><i className='fas fa-home'/>HOME</button>
+                <button className='btn btn-dark'><i className='fas fa-grin-stars'/>PROMOTIONS</button>
+                <button className='btn btn-dark'><i className='fab fa-cc-visa'></i>HOW TO PAY</button>
+                <button className='btn btn-dark'><i className='fas fa-address-card'/>ABOUT US</button>
+                <Popup/>
             </div>
         </div>
     );
