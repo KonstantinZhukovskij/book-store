@@ -6,22 +6,20 @@
 }
 
 .fa-shopping-cart {
-  font-size: 170%;
-  padding-top: 5%;
+  font-size: 150%;
+  padding-top: 10%;
+  color: $activeColor;
 }
 
 .modal-content {
-  color: black;
+  width: 130%;
+  color: #ffffff;
   border-radius: 0 !important;
-  background-color: rgba(255, 255, 255, 0.50);
+  background-color: $backgroundColor
 }
 
 .modal-dialog {
-  position: absolute;
-  top: 37px;
-  left: 63%;
-  right: 0;
-  bottom: 0;
+  top: 36px;
 }
 
 .modal-footer {
@@ -37,6 +35,10 @@
 
 .modalButtons {
   justify-self: end;
+}
+
+.modalButtons button:first-child {
+  margin-right: 5px;
 }
 
 .modal-footer button {

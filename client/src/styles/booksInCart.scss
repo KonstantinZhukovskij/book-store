@@ -2,22 +2,35 @@
 
 .booksInCart {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 4fr 1fr;
+}
+
+.booksInCart .fa-plus {
+  color: #2E8B57;
+}
+
+.booksInCart .fa-minus {
+  color: #ffff00;
+}
+
+.booksInCart .fa-trash {
+  color: #ffffff;
+}
+
+.productInformation {
+  display: grid;
+  grid-template-columns: 3fr 0.5fr 0.5fr;
+  align-items: end;
 }
 
 .booksInCart p {
   font-size: 17px;
   padding-top: 5%;
-  padding-left: 5%;
+  padding-left: 3%;
 }
 
 .booksInCart button {
-  width: 40%;
-  justify-self: end;
   background: transparent !important;
   border: none !important;
-}
-
-.booksInCart button:hover i {
-  background-color: $activeColor;
+  align-items: end;
 }
