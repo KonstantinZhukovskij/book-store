@@ -35,6 +35,7 @@ const removeAllBookFromCart = (bookId) => {
 
 export {
     booksLoaded,
+    booksError,
     addBookToCart,
     removeBookFromCart,
     removeAllBookFromCart

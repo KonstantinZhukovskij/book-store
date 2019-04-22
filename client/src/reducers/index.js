@@ -9,81 +9,82 @@ const initialState = {
 
 const addBookToCart = (state, bookId) => {
     const selectedBook = state.books.find((book) => book.id === bookId);
-    const selectedBookIndex = state.cart.findIndex((book) => book.id === bookId);
+    const bookIndex = state.cart.findIndex((book) => book.id === bookId);
 
-    if (selectedBookIndex === -1) {
+    if (bookIndex === -1) {
         toastr.success('Book has been added to cart', 'Success');
 
         const book = {
             ...selectedBook,
             amount: 1,
-            sumTotal: selectedBook.price * selectedBook.amount
+            sumTotal: selectedBook.price
         };
 
         return {
             ...state,
             cart: [
-                book,
-                ...state.cart
-
+                ...state.cart,
+                book
             ]
         };
     } else {
+        const bookInCart = state.cart.find((book) => book.id === bookId);
+
         const book = {
-            ...selectedBook,
-            amount: ++selectedBook.amount,
-            sumTotal: selectedBook.price * selectedBook.amount
+            ...bookInCart,
+            amount: ++bookInCart.amount,
+            sumTotal: bookInCart.price * bookInCart.amount
         };
+
         return {
             ...state,
             cart: [
-                ...state.cart.slice(0, selectedBookIndex),
+                ...state.cart.slice(0, bookIndex),
                 book,
-                ...state.cart.slice(selectedBookIndex + 1)
+                ...state.cart.slice(bookIndex + 1)
             ]
         };
     }
 };
 
 const removeBookFromCart = (state, bookId) => {
-    const selectedBook = state.books.find((book) => book.id === bookId);
-    const selectedBookIndex = state.cart.findIndex((book) => (book.id) === bookId);
+    const bookInCart = state.cart.find((book) => book.id === bookId);
+    const bookIndex = state.cart.findIndex((book) => book.id === bookId);
 
-    if (selectedBook.amount === 0) {
+    const book = {
+        ...bookInCart,
+        amount: --bookInCart.amount,
+        sumTotal: bookInCart.price * bookInCart.amount
+    };
+
+    if (bookInCart.amount === 0) {
         return {
             ...state,
             cart: [
-                ...state.cart.slice(0, selectedBookIndex),
-                ...state.cart.slice(selectedBookIndex + 1)
+                ...state.cart.slice(0, bookIndex),
+                ...state.cart.slice(bookIndex + 1)
             ]
         };
     } else {
-        const book = {
-            ...selectedBook,
-            amount: --selectedBook.amount,
-            sumTotal: selectedBook.price * selectedBook.amount
-        };
-
         return {
             ...state,
             cart: [
-                ...state.cart.slice(0, selectedBookIndex),
+                ...state.cart.slice(0, bookIndex),
                 book,
-                ...state.cart.slice(selectedBookIndex + 1)
+                ...state.cart.slice(bookIndex + 1)
             ]
         };
     }
 };
 
 const removeAllBookFromCart = (state, bookId) => {
-    const selectedBook = state.books.find((book) => book.id === bookId);
-    const selectedBookIndex = state.cart.findIndex((book) => (book.id) === bookId);
+    const bookIndex = state.cart.findIndex((book) => book.id === bookId);
 
     return {
         ...state,
         cart: [
-            ...state.cart.slice(0, selectedBookIndex),
-            ...state.cart.slice(selectedBookIndex + 1)
+            ...state.cart.slice(0, bookIndex),
+            ...state.cart.slice(bookIndex + 1)
         ]
     };
 };

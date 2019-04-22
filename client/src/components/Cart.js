@@ -39,7 +39,7 @@ const Cart = ({ cart, addBookToCart, removeBookFromCart, removeAllBookFromCart }
                             })}
                         </div>
                         <div className='modal-footer'>
-                            <p className='total'>{`${sumTotal} $`}</p>
+                            <p className='total'>{`Total: ${sumTotal} $`}</p>
                             <div className='modalButtons'>
                                 <button type='button' className='btn btn-secondary' data-dismiss='modal'>Close</button>
                                 <button type='button' className='btn btn-secondary'>Go to the payment</button>
