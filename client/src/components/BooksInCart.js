@@ -1,27 +1,27 @@
 import React from 'react';
 
-const BooksInCart = () => {
+const BooksInCart = ({ book, addBookToCart, removeBookFromCart, removeAllBookFromCart }) => {
     return (
         <div className='booksInCart'>
             <div className='productInformation'>
                 <p>
-                    "{`JavaScript: The Good Parts`}" {`Douglas Crockford`}
+                    "{book.title}" --- {book.author}
                 </p>
                 <p>
-                    {`5 pc`}
+                    {book.amount}
                 </p>
                 <p>
-                    {`300`}$
+                    {book.price}$
                 </p>
             </div>
             <div>
-                <button className='btn btn-dark'>
+                <button className='btn btn-dark' onClick={() => addBookToCart(book.id)}>
                     <i className='fas fa-plus'/>
                 </button>
-                <button className='btn btn-dark'>
+                <button className='btn btn-dark' onClick={() => removeBookFromCart(book.id)}>
                     <i className='fas fa-minus'/>
                 </button>
-                <button className='btn btn-dark'>
+                <button className='btn btn-dark' onClick={() => removeAllBookFromCart(book.id)}>
                     <i className='fas fa-trash'/>
                 </button>
             </div>

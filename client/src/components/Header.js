@@ -1,4 +1,4 @@
-import Popup from 'components/Popup';
+import Cart from 'components/Cart';
 import React from 'react';
 
 const Header = () => {
@@ -9,7 +9,7 @@ const Header = () => {
                 <button className='btn btn-dark'><i className='fas fa-grin-stars'/>PROMOTIONS</button>
                 <button className='btn btn-dark'><i className='fab fa-cc-visa'></i>HOW TO PAY</button>
                 <button className='btn btn-dark'><i className='fas fa-address-card'/>ABOUT US</button>
-                <Popup/>
+                <Cart/>
             </div>
         </div>
     );

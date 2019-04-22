@@ -1,6 +1,6 @@
 @import 'constants';
 
-.popup {
+.cart {
   justify-self: end;
   padding-right: 10%;
 }
@@ -12,14 +12,12 @@
 }
 
 .modal-content {
+  position: absolute;
   width: 130%;
+  top: 36px;
   color: #ffffff;
   border-radius: 0 !important;
   background-color: $backgroundColor
-}
-
-.modal-dialog {
-  top: 36px;
 }
 
 .modal-footer {

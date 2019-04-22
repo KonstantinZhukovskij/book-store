@@ -1,27 +1,33 @@
-import { bookAddedToCart, booksLoaded } from 'actions';
+import { addBookToCart, booksLoaded } from 'actions';
 import BookCard from 'components/BookCard';
+import Spinner from 'components/Spinner';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import getBooks from 'services/bookService';
 
 class BookBar extends Component {
     componentDidMount() {
-        const books = getBooks();
+        const { booksLoaded } = this.props;
 
-        this.props.booksLoaded(books);
+        const books = getBooks();
+        booksLoaded(books);
     }
 
     render() {
-        const { books, bookAddedToCart } = this.props;
+        const { books, loading, addBookToCart } = this.props;
+
+        if (loading) {
+            return <Spinner/>;
+        }
 
         return (
             <div className='bookBar'>
-                {books.map((book, index) => {
+                {books.map((book) => {
                     return (
                         <BookCard
                             book={book}
-                            bookAddedToCart={bookAddedToCart}
-                            key={index}
+                            addBookToCart={addBookToCart}
+                            key={book.id}
                         />
                     );
                 })}
@@ -30,23 +36,10 @@ class BookBar extends Component {
     };
 }
 
-const mapStateToProps = (state) => {
-    return {
-        books: state.books,
-        loading: state.loading,
-        cart: state.cart
-    };
+const mapStateToProps = ({ books, loading, cart }) => {
+    return { books, loading, cart };
 };
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        booksLoaded: (newBooks) => {
-            dispatch(booksLoaded(newBooks));
-        },
-        bookAddedToCart: (bookId) => {
-            dispatch(bookAddedToCart(bookId));
-        }
-    };
-};
+const mapDispatchToProps = { booksLoaded, addBookToCart };
 
 export default connect(mapStateToProps, mapDispatchToProps)(BookBar);
