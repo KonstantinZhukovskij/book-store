@@ -1,5 +1,13 @@
 import React from 'react';
 
+const renderShoppingCartButton = (listener, classname) => {
+    return (
+        <button className='btn btn-dark' onClick={listener}>
+            <i className={classname}/>
+        </button>
+    );
+};
+
 const BookInShoppingCart = ({ book, addBookToCart, removeBookFromCart, removeAllBookFromCart }) => {
     return (
         <div className='bookInShoppingCart'>
@@ -15,15 +23,9 @@ const BookInShoppingCart = ({ book, addBookToCart, removeBookFromCart, removeAll
                 </p>
             </div>
             <div>
-                <button className='btn btn-dark' onClick={() => addBookToCart(book.id)}>
-                    <i className='fas fa-plus'/>
-                </button>
-                <button className='btn btn-dark' onClick={() => removeBookFromCart(book.id)}>
-                    <i className='fas fa-minus'/>
-                </button>
-                <button className='btn btn-dark' onClick={() => removeAllBookFromCart(book.id)}>
-                    <i className='fas fa-trash'/>
-                </button>
+                {renderShoppingCartButton(() => addBookToCart(book.id), 'fas fa-plus')}
+                {renderShoppingCartButton(() => removeBookFromCart(book.id), 'fas fa-minus')}
+                {renderShoppingCartButton(() => removeAllBookFromCart(book.id), 'fas fa-trash')}
             </div>
         </div>
     );
