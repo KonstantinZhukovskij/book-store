@@ -1,9 +1,9 @@
 import React from 'react';
 
-const BooksInCart = ({ book, addBookToCart, removeBookFromCart, removeAllBookFromCart }) => {
+const BookInShoppingCart = ({ book, addBookToCart, removeBookFromCart, removeAllBookFromCart }) => {
     return (
-        <div className='booksInCart'>
-            <div className='productInformation'>
+        <div className='bookInShoppingCart'>
+            <div className='bookInformation'>
                 <p>
                     "{book.title}" --- {book.author}
                 </p>
@@ -29,4 +29,4 @@ const BooksInCart = ({ book, addBookToCart, removeBookFromCart, removeAllBookFro
     );
 };
 
-export default BooksInCart;
+export default BookInShoppingCart;

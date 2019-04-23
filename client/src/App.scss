@@ -1,11 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Manuale:400i');
-@import 'styles/mainPage';
+@import 'styles/constants';
 @import 'styles/header';
-@import 'styles/cart';
+@import 'styles/shoppingCart';
 @import 'styles/preview';
-@import 'styles/bookBar';
+@import 'styles/bookPanel';
 @import 'styles/bookCard';
 @import 'styles/aboutUs';
 @import 'styles/footer';
 @import 'styles/spinner';
-@import 'styles/booksInCart';
+@import 'styles/bookInShoppingCart';
+
+#root {
+  width: 100%;
+  height: 100%;
+  font-family: 'Manuale', serif;
+}
+
+.btn:hover {
+  box-shadow: $boxShadow
+}

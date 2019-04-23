@@ -5,7 +5,7 @@ const BookCard = ({ book, addBookToCart }) => {
     return (
         <div className='bookCard'>
             <div className='bookCardContent'>
-                <img src={image} alt='Book cover'/>
+                <img src={image} alt={title}/>
                 <h4> {title} </h4>
                 <p> {author} </p>
                 <h4> {price}$</h4>

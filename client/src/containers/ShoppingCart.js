@@ -1,16 +1,16 @@
 import { addBookToCart, removeAllBookFromCart, removeBookFromCart } from 'actions';
-import BooksInCart from 'components/BooksInCart';
+import BookInShoppingCart from 'components/BookInShoppingCart';
 import React from 'react';
 import { connect } from 'react-redux';
 
-const Cart = ({ cart, addBookToCart, removeBookFromCart, removeAllBookFromCart }) => {
+const ShoppingCart = ({ cart, addBookToCart, removeBookFromCart, removeAllBookFromCart }) => {
 
     const sumTotal = cart.reduce((previousSum, currentValue) => {
         return previousSum + currentValue.sumTotal;
     }, 0);
 
     return (
-        <div className='cart'>
+        <div className='shoppingCart'>
             <button type='button' className='btn btn-dark shoppingCart' data-toggle='modal' data-target='#cardModal'>
                 <i className='fas fa-shopping-cart'/>
             </button>
@@ -28,7 +28,7 @@ const Cart = ({ cart, addBookToCart, removeBookFromCart, removeAllBookFromCart }
                         <div className='true'>
                             {cart.map((book) => {
                                 return (
-                                    <BooksInCart
+                                    <BookInShoppingCart
                                         book={book}
                                         addBookToCart={addBookToCart}
                                         removeBookFromCart={removeBookFromCart}
@@ -58,4 +58,4 @@ const mapStateToProps = ({ cart }) => {
 
 const mapDispatchToProps = { addBookToCart, removeBookFromCart, removeAllBookFromCart };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Cart);
+export default connect(mapStateToProps, mapDispatchToProps)(ShoppingCart);

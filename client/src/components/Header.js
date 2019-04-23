@@ -1,4 +1,4 @@
-import Cart from 'components/Cart';
+import Cart from 'containers/ShoppingCart';
 import React from 'react';
 
 const Header = () => {

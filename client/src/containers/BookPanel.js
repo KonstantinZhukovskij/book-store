@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import getBooks from 'services/bookService';
 
-class BookBar extends Component {
+class BookPanel extends Component {
     componentDidMount() {
         const { booksLoaded } = this.props;
 
@@ -21,7 +21,7 @@ class BookBar extends Component {
         }
 
         return (
-            <div className='bookBar'>
+            <div className='bookPanel'>
                 {books.map((book) => {
                     return (
                         <BookCard
@@ -36,10 +36,10 @@ class BookBar extends Component {
     };
 }
 
-const mapStateToProps = ({ books, loading, cart }) => {
-    return { books, loading, cart };
+const mapStateToProps = ({ books, loading }) => {
+    return { books, loading };
 };
 
 const mapDispatchToProps = { booksLoaded, addBookToCart };
 
-export default connect(mapStateToProps, mapDispatchToProps)(BookBar);
+export default connect(mapStateToProps, mapDispatchToProps)(BookPanel);

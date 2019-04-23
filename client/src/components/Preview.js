@@ -8,7 +8,7 @@ const scrollToElement = () => {
 const Preview = () => {
     return (
         <div className='preview'>
-            <div className='divPreview'>
+            <div className='previewContent'>
                 <h1 className='textPreview'>
                     Only for visitors to our site
                 </h1>
