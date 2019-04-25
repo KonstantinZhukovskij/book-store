@@ -30,8 +30,8 @@ const getBooks = () => {
         },
         {
             id: 5,
-            title: 'Secrets of JavaScript Ninja',
-            author: 'Bear Bibeault and John Resig',
+            title: 'Secrets of the JavaScript Ninja',
+            author: 'Bear Bibeault',
             price: 25,
             image: 'https://images-na.ssl-images-amazon.com/images/I/51sxvZlbH5L._SX383_BO1,204,203,200_.jpg'
         },

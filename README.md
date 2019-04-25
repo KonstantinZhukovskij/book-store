@@ -2,7 +2,7 @@
 
 ## Watch the demo
 
-https://zeit.co/konstantinzhukovskij93/projects
+https://book-store-gocuvylh8.now.sh/
              
 ## How to install ?
 

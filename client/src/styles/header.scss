@@ -14,7 +14,7 @@
   color: $activeColor;
 }
 
-.headerButtons button:first-child {
+.headerButtons a:first-child {
   grid-column-start: 2;
 }
 
@@ -23,6 +23,7 @@
   background-color: $backgroundColor;
   border-radius: 0 !important;
   font-size: 20px;
+  padding-top: 15px;
 }
 
 .header .btn-dark:hover {

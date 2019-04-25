@@ -1,11 +1,13 @@
-import Cart from 'containers/ShoppingCart';
+import ShoppingCart from 'containers/ShoppingCart';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const renderHeaderButton = (classname, title) => {
     return (
-        <button className='btn btn-dark'><i className={classname}/>
+        <Link className='btn btn-dark' to='/'>
+            <i className={classname}/>
             {title}
-        </button>
+        </Link>
     );
 };
 
@@ -17,7 +19,7 @@ const Header = () => {
                 {renderHeaderButton('fas fa-grin-stars', 'PROMOTIONS')}
                 {renderHeaderButton('fab fa-cc-visa', 'HOW TO PAY')}
                 {renderHeaderButton('fas fa-address-card', 'ABOUT US')}
-                <Cart/>
+                <ShoppingCart/>
             </div>
         </div>
     );

@@ -1,4 +1,4 @@
-import { addBookToCart, booksLoaded } from 'actions';
+import { addBookToCart, saveDownloadedBooks } from 'actions';
 import BookCard from 'components/BookCard';
 import Spinner from 'components/Spinner';
 import React, { Component } from 'react';
@@ -40,6 +40,6 @@ const mapStateToProps = ({ books, loading }) => {
     return { books, loading };
 };
 
-const mapDispatchToProps = { booksLoaded, addBookToCart };
+const mapDispatchToProps = { booksLoaded: saveDownloadedBooks, addBookToCart };
 
 export default connect(mapStateToProps, mapDispatchToProps)(BookPanel);

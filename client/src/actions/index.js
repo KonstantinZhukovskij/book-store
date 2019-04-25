@@ -1,14 +1,7 @@
-const booksLoaded = (newBooks) => {
+const saveDownloadedBooks = (newBooks) => {
     return {
         type: 'BOOKS_LOADED',
         payload: newBooks
-    };
-};
-
-const booksError = (error) => {
-    return {
-        type: 'BOOKS_ERROR',
-        payload: error
     };
 };
 
@@ -34,8 +27,7 @@ const removeAllBookFromCart = (bookId) => {
 };
 
 export {
-    booksLoaded,
-    booksError,
+    saveDownloadedBooks,
     addBookToCart,
     removeBookFromCart,
     removeAllBookFromCart

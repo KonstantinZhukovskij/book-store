@@ -32,7 +32,8 @@ module.exports = {
     },
     devServer: {
         contentBase: path.join(__dirname, DIST_FOLDER_NAME),
-        port: 3000
+        port: 3000,
+        historyApiFallback: true
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -46,6 +47,7 @@ module.exports = {
     ],
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, DIST_FOLDER_NAME)
+        path: path.resolve(__dirname, DIST_FOLDER_NAME),
+        publicPath: '/'
     }
 };

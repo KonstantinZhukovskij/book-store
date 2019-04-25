@@ -1,21 +1,22 @@
-import AboutUs from 'components/AboutUs';
-import Footer from 'components/Footer';
-import Header from 'components/Header';
-import Preview from 'components/Preview';
-import BookBar from 'containers/BookPanel';
+import HomePage from 'components/pages/HomePage';
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import store from 'store';
 
 export default class App extends Component {
     render() {
         return (
             <Provider store={store}>
-                <Header/>
-                <Preview/>
-                <BookBar/>
-                <AboutUs/>
-                <Footer/>
+                <BrowserRouter>
+                    <Switch>
+                        <Route
+                            path='/'
+                            component={HomePage}
+                            exact
+                        />
+                    </Switch>
+                </BrowserRouter>
             </Provider>
         );
     }

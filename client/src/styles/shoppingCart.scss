@@ -1,13 +1,12 @@
 @import 'constants';
 
 .shoppingCart {
+  width: 50%;
   justify-self: end;
-  padding-right: 10%;
 }
 
 .fa-shopping-cart {
   font-size: 150%;
-  padding-top: 10%;
   color: $activeColor;
 }
 
