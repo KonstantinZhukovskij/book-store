@@ -1,9 +1,8 @@
-.bookBar {
+.bookPanel {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
   height: 100vh;
-  padding: 30px;
+  grid-gap: 15px;
+  padding: 15px;
   background-color: rgba(245, 245, 245, 0.40);
 }

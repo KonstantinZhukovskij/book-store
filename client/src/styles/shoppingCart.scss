@@ -1,0 +1,49 @@
+@import 'constants';
+
+.shoppingCart {
+  width: 50%;
+  justify-self: end;
+}
+
+.fa-shopping-cart {
+  font-size: 150%;
+  color: $activeColor;
+}
+
+.modal-content {
+  position: absolute;
+  width: 130%;
+  top: 36px;
+  color: #ffffff;
+  border-radius: 0 !important;
+  background-color: $backgroundColor
+}
+
+.modal-footer {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.total {
+  justify-self: start;
+  font-size: 25px;
+  padding-top: 10%;
+}
+
+.modalButtons {
+  justify-self: end;
+}
+
+.modalButtons button:first-child {
+  margin-right: 5px;
+}
+
+.modal-footer button {
+  background-color: $activeColor;
+  color: #000000;
+  justify-self: end;
+}
+
+.modal-title {
+  font-size: 25px;
+}

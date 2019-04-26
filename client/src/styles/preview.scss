@@ -1,13 +1,13 @@
 @import 'constants';
 
-$backgroundImage: url('images/book-club.png');
+$backgroundImage: url('images/book-club-min.png');
 
 .preview {
   background-image: $backgroundImage;
   height: calc(100vh - #{$headerSize});
 }
 
-.divPreview {
+.previewContent {
   width: 60%;
   padding-left: 5%;
 }

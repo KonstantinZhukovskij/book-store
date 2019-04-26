@@ -1,27 +1,33 @@
 # Book Store
 
+## Watch the demo
+
+https://book-store-gocuvylh8.now.sh/
+             
 ## How to install ?
 
 * **Clone the repo**
-    ```bash
-    git clone https://github.com/KonstantinZhukovskij/book-store.git
-    ```
+   
+  ```
+  git clone https://github.com/KonstantinZhukovskij/book-store.git
+  ```
+
 * **Enter the folder**
-     ```bash
-     cd client
-     ```
+  ```
+  cd client
+  ```
 * **Install dependencies**
-     ```bash
-     npm install
-     ```
+  ```
+  npm install
+  ```
 * **Run project**
-    ```bash
-    npm start
-    ```
+  ```
+  npm start
+  ```
 * **Visit**
-    ```bash
+
     http://localhost:3000
-    ```
 
 ## Used:
 * **React**
+* **Redux**

@@ -1,0 +1,36 @@
+@import 'constants';
+
+.bookInShoppingCart {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+
+.bookInShoppingCart .fa-plus {
+  color: #2E8B57;
+}
+
+.bookInShoppingCart .fa-minus {
+  color: #ffff00;
+}
+
+.bookInShoppingCart .fa-trash {
+  color: #ffffff;
+}
+
+.bookInformation {
+  display: grid;
+  grid-template-columns: 3fr 0.5fr 0.5fr;
+  align-items: end;
+}
+
+.bookInShoppingCart p {
+  font-size: 17px;
+  padding-top: 5%;
+  padding-left: 3%;
+}
+
+.bookInShoppingCart button {
+  background: transparent !important;
+  border: none !important;
+  align-items: end;
+}
